@@ -1,0 +1,23 @@
+---
+title: "The OLI Sensor of Landsat 8"
+subtitle: "Week 2 Homework"
+author: "Jinting Ji"
+institute: "CASA"
+date: "2/26/2022 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse, middle
+# Outline:
+## 1. Overview of Landsat 8
+## 2. OLI Sensor Overview
+## 3. Technical Features of OLI
+## 4. OLI Spectral Bands
+## 5. Applications of OLI in Earth Observation
+---
+
