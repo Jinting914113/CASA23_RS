@@ -1,9 +1,5 @@
-# Ignore everything
-*
-
-# But not these files
-!*.pdf
-!*.Rmd
-!*.Rproj
-!*.png
-!*.html
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
