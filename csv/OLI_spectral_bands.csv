@@ -1,0 +1,10 @@
+Bands, Band_width_μm,Resolution_meters
+1 - Coastal Aerosol,0.433_0.453,30
+2 - Blue,0.450_0.515,30
+3 - Green,0.525_0.600,30
+4 - Red,0.630_0.680,30
+5 - Near-Infrared,0.845_0.885,30
+6 - SWIR 1,1.560_1.660,30
+7 - SWIR 2,2.100_2.300,30
+8 - Panchromatic (PAN),0.500_0.680,15
+9 - Cirrus,1.360_1.390,30

@@ -7,6 +7,8 @@
     <script src="libs/header-attrs-2.26/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -31,43 +33,205 @@ class: center, middle, inverse, title-slide
 ---
 
 class: inverse, middle
+ 
 # Outline:
-## 1. Overview of Landsat 8
-## 2. Summary of the OLI Sensor
-## 3. Application of OLI Data
-## 4. Reflections on the OLI Sensor
-## 5. Applications of OLI in Earth Observation
+## A. Overview of Landsat 8
+## B. Summary of the Lnadsat 8 OLI Sensor
+## C. Application of Landsat 8 OLI Data
+## D. Reflections on the Landsat 8 OLI Sensor
 ---
-## 1. Overview of Landsat 8
+
+## A. Overview of Landsat 8
 &lt;style&gt;
   .remark-slide-content {
-    font-size: 22px; /* 修改为你希望的大小 */
+    font-size: 22px;
   }
 
 &lt;/style&gt; 
- * Affiliation: NASA and the United States Geological Survey (USGS)
+* Affiliation: NASA and the United States Geological Survey (USGS)
  
- * The eighth satellite in the Landsat program
+* The eighth satellite in the Landsat program
 
- * Launching time: February 11, 2013
+* Launching time: February 11, 2013
 
- * Composition: the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS).They provide seasonal coverage of the global landmass at a spatial resolution of:
-    * Visible, NIR, SWI: 30 meters
-    * Thermal: 100 meters
-    * Panchromatic: 15 meters
-    
+* Composition: the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS).They provide seasonal coverage of the global landmass at a spatial resolution of:
+  * Visible, NIR, SWI: 30 meters
+  * Thermal: 100 meters
+  * Panchromatic: 15 meters
+  
+.small[Source: [NASA](https://en.wikipedia.org/wiki/Landsat_8)
+]
 ---
-## 2. Summary of the OLI Sensor
+class: inverse, middle
 
+## B. Summary of the Lnadsat 8 OLI Sensor
+### &lt;br/&gt;1. Overview
+### &lt;br/&gt;2. Spectral bands of Landsat 8 OLI Sensor
+
+---
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 50px;
+height: 128px;
+z-index: 0;
+background-image: url(img/casa_logo.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:2em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+### B1. Summary of the OLI Sensor - Overview
+* Sensor type: Passive
+
+* Key instrument on the Landsat 8 satellite
+
+* Manufacturer: the Ball Aerospace &amp; Technologies Corporation
+
+* OLI utilizes a pushbroom sensor mechanism for greater imaging efficiency and quality
+
+* Measurable bands: It captures images in 9 spectral bands, including visible, near-infrared (NIR), and shortwave infrared (SWIR) wavelengths, significantly improving upon the capabilities of previous Landsat sensors
+
+* The sensor is designed for a wide array of Earth observation purposes
+
+.small[Source: [Wikipedia](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/oli-requirements/), [USGS](https://www.usgs.gov/landsat-missions/landsat-8) and [NASA](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/oli-requirements/).
+]
+---
+
+### B2. Spectral bands of Landsat 8 OLI Sensor
+* Details of the Spectral bands for Landsat 8's OLI sensor are as follows：
+
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Bands &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Band_width_μm &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Resolution_meters &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 - Coastal Aerosol &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.433_0.453 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 2 - Blue &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.450_0.515 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 - Green &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.525_0.600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 4 - Red &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.630_0.680 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 5 - Near-Infrared &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.845_0.885 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 6 - SWIR 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.560_1.660 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 7 - SWIR 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2.100_2.300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 8 - Panchromatic (PAN) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.500_0.680 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 9 - Cirrus &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.360_1.390 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 30 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.small[Source: [NASA](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/oli-requirements/) and [USGS](https://www.usgs.gov/landsat-missions/landsat-8)
+]
 ---
 ## 3. Application of OLI Data
+By calculating and analysing the different spectral bands of OLI, it is possible to make its application in many fields such as agriculture, ecological protection, water resource protection, etc.
 
+
+
+
+.panelset[
+
+.panel[.panel-name[OLI spectral band synthesis]
+
+
+
+&lt;img src="img/OLI_spectral_band_synthesis.jpg" width="91%" style="display: block; margin: auto;" /&gt;
+]
+
+.panel[.panel-name[Climate Change Studies]
+
+* OLI data are used to monitor changes in glaciers and ice sheets, providing valuable information for climate change modelling and environmental policymaking.
+]
+
+.panel[.panel-name[Urban Expansion Analysis]
+
+* OLI imagery data have played an important role in tracking urban sprawl and its impacts on natural habitats and water resources, contributing to better urban planning and management strategies.
+]
+
+.panel[.panel-name[Agricultural Monitoring]
+
+* Researchers use OLI data to assess crop health and predict yields in agricultural areas. This helps with food security planning and sustainable agricultural practices.
+]
+
+]
+
+.small[Source: [Landsat Science - Data Use](https://landsat.gsfc.nasa.gov/data/data-use/) (multiple tutorials or articles on the application of Landsat 8 OLI sensor data)
+]
 ---
 ## 4. Reflections on the OLI Sensor
 
----
+* During this week's self-study, I learnt about the background of Landsat 8's OLI sensor, its spectral bands, the application of its data and many other aspects.
 
+* In the future, we can calculate the bands and analyse the data after processing, which could be applied in many fields such as agriculture, environmental protection, and so on.
+ * For example, it is possible to extract the Antarctic ice cover through the calculation of the normalisation index and subsequent data processing, and to calculate and analyse the area of the ice cover in different years to analyse issues related to the Antarctic ecosystem.
 ---
+class: inverse,middle
+# This is the end of my  Presentation!
+# &lt;br/&gt;Thank you!
+# &lt;br/&gt;Any questions?
+
 
 
 
