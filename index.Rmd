@@ -15,9 +15,46 @@ output:
 class: inverse, middle
 # Outline:
 ## 1. Overview of Landsat 8
-## 2. OLI Sensor Overview
-## 3. Technical Features of OLI
-## 4. OLI Spectral Bands
+## 2. Summary of the OLI Sensor
+## 3. Application of OLI Data
+## 4. Reflections on the OLI Sensor
 ## 5. Applications of OLI in Earth Observation
 ---
+## 1. Overview of Landsat 8
+<style>
+  .remark-slide-content {
+    font-size: 22px; /* 修改为你希望的大小 */
+  }
+
+</style> 
+ * Affiliation: NASA and the United States Geological Survey (USGS)
+ 
+ * The eighth satellite in the Landsat program
+
+ * Launching time: February 11, 2013
+
+ * Composition: the Operational Land Imager (OLI) and the Thermal Infrared Sensor (TIRS).They provide seasonal coverage of the global landmass at a spatial resolution of:
+    * Visible, NIR, SWI: 30 meters
+    * Thermal: 100 meters
+    * Panchromatic: 15 meters
+    
+---
+### 2. Summary of the OLI Sensor - Overview
+Manufacturer: the Ball Aerospace & Technologies Corporation
+
+Measurable bands: 
+
+
+
+---
+## 3. Application of OLI Data
+
+---
+## 4. Reflections on the OLI Sensor
+
+---
+
+---
+
+
 
